@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should apply border radius if round prop is provided and is true 1`] = `
+<picture>
+  <source
+    srcSet="path/to/img.webp"
+    type="image/webp"
+  />
+  <styled.img
+    alt="alt"
+    data-test-id="img"
+    round={true}
+    src="path/to/img.jpg"
+    styles="
+    display: block;
+    border-radius: 50%;
+"
+    width="100%"
+  />
+</picture>
+`;
+
+exports[`Image should match snapshot 1`] = `
+<picture>
+  <source
+    srcSet="path/to/img.webp"
+    type="image/webp"
+  />
+  <styled.img
+    alt="alt"
+    data-test-id="img"
+    src="path/to/img.jpg"
+    styles="
+    display: block;
+    
+"
+    width="100%"
+  />
+</picture>
+`;

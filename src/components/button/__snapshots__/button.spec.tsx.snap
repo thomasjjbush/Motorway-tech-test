@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button should match snapshot 1`] = `
+<styled.button
+  disabled={false}
+  onClick={[MockFunction]}
+  styles="
+    appearance: none;
+    background-color: theme.colors.blue;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+"
+  type="button"
+>
+  hello!
+</styled.button>
+`;

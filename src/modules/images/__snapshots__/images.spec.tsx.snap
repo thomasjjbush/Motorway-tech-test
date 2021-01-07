@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Images should match before and after loading images snapshot 1`] = `
+<Images
+  columns={2}
+>
+  <styled.div
+    columns={2}
+    styles="
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    max-width: 1300px;
+"
+  >
+    <div
+      className="sc-bdfBwQ hDKNXZ"
+    >
+      <div
+        key="0"
+      />
+      <div
+        key="1"
+      />
+      <Button
+        onClick={[Function]}
+        type="button"
+      >
+        Load more
+      </Button>
+    </div>
+  </styled.div>
+</Images>
+`;
+
+exports[`Images should match before and after loading images snapshot 2`] = `
+<Images
+  columns={2}
+>
+  <styled.div
+    columns={2}
+    styles="
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    max-width: 1300px;
+"
+  >
+    <div
+      className="sc-bdfBwQ hDKNXZ"
+    >
+      <div
+        key="0"
+      >
+        <styled.div
+          data-test-id="grid-item"
+          key="1"
+          styles="
+    margin-bottom: 20px;
+    position: relative;
+
+    :hover,
+    :focus {
+        img {
+            filter: grayscale(100%);
+        }
+
+        > .sc-gsTCUz {
+            opacity: 1;
+        }
+    }
+"
+          tabIndex={0}
+        >
+          <div
+            className="sc-dlfnbm iwMkmt"
+            data-test-id="grid-item"
+            tabIndex={0}
+          >
+            <Image
+              alt="alt description"
+              src="http://localhost:5000/endpoint"
+            >
+              Image
+            </Image>
+            <styled.div
+              styles="
+    align-items: center;
+
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.5s ease;
+"
+            >
+              <div
+                className="sc-gsTCUz gzAfA-D"
+              >
+                <Image
+                  alt="Lord Souron"
+                  round={true}
+                  src="http://localhost:5000/profile_image_souron"
+                  width="75px"
+                >
+                  Image
+                </Image>
+                <styled.h2
+                  styles="
+    margin: 0;
+"
+                >
+                  <h2
+                    className="sc-hKgILt ioRZeK"
+                  >
+                    Lord Souron
+                  </h2>
+                </styled.h2>
+                <styled.p
+                  styles="
+    margin: 0;
+"
+                >
+                  <p
+                    className="sc-eCssSg bRCGol"
+                  >
+                    Likes: 
+                    500
+                  </p>
+                </styled.p>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </div>
+      <div
+        key="1"
+      >
+        <styled.div
+          data-test-id="grid-item"
+          key="2"
+          styles="
+    margin-bottom: 20px;
+    position: relative;
+
+    :hover,
+    :focus {
+        img {
+            filter: grayscale(100%);
+        }
+
+        > .sc-gsTCUz {
+            opacity: 1;
+        }
+    }
+"
+          tabIndex={0}
+        >
+          <div
+            className="sc-dlfnbm iwMkmt"
+            data-test-id="grid-item"
+            tabIndex={0}
+          >
+            <Image
+              alt="another alt description"
+              src="http://localhost:5000/another-endpoint"
+            >
+              Image
+            </Image>
+            <styled.div
+              styles="
+    align-items: center;
+
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.5s ease;
+"
+            >
+              <div
+                className="sc-gsTCUz gzAfA-D"
+              >
+                <Image
+                  alt="Samwise the brave"
+                  round={true}
+                  src="http://localhost:5000/profile_image_sam"
+                  width="75px"
+                >
+                  Image
+                </Image>
+                <styled.h2
+                  styles="
+    margin: 0;
+"
+                >
+                  <h2
+                    className="sc-hKgILt ioRZeK"
+                  >
+                    Samwise the brave
+                  </h2>
+                </styled.h2>
+                <styled.p
+                  styles="
+    margin: 0;
+"
+                >
+                  <p
+                    className="sc-eCssSg bRCGol"
+                  >
+                    Likes: 
+                    500
+                  </p>
+                </styled.p>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </div>
+      <Button
+        onClick={[Function]}
+        type="button"
+      >
+        Load more
+      </Button>
+    </div>
+  </styled.div>
+</Images>
+`;

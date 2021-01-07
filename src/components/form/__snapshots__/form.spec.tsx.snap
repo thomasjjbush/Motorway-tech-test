@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match snapshot 1`] = `
+<styled.form
+  aria-label="aria label"
+  data-test-id="form"
+  onSubmit={[MockFunction]}
+  styles="
+    border: solid 2px black;
+    border-radius: 5px;
+    margin: auto;
+    max-width: 1000px;
+    padding: 30px;
+"
+>
+  <div
+    key="mock"
+  >
+    <styled.label
+      htmlFor="mock"
+      styles="
+    display: block;
+    margin-bottom: 5px;
+"
+    >
+      mock
+    </styled.label>
+    <styled.input
+      id="mock"
+      name="mock"
+      onChange={[Function]}
+      styles="
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+    border: solid 2px theme.colors.red;
+"
+      valid={false}
+      value=""
+    />
+  </div>
+  <div
+    key="anotherMock"
+  >
+    <styled.label
+      htmlFor="anotherMock"
+      styles="
+    display: block;
+    margin-bottom: 5px;
+"
+    >
+      Another mock
+    </styled.label>
+    <styled.input
+      id="anotherMock"
+      max={30}
+      min={0}
+      name="Another mock"
+      onChange={[Function]}
+      styles="
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+    border: solid 2px black;
+"
+      type="number"
+      valid={true}
+      value={5}
+    />
+  </div>
+  <Button
+    disabled={true}
+    type="submit"
+  >
+    Submit
+  </Button>
+</styled.form>
+`;
