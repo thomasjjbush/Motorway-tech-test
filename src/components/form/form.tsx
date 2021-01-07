@@ -20,7 +20,7 @@ const Input = styled.input<StyledProps<{ valid: boolean }>>`
 const StyledForm = styled.form`
     border: solid 2px black;
     border-radius: 5px;
-    margin: auto;
+    margin: 20px auto 0;
     max-width: 1000px;
     padding: 30px;
 `;

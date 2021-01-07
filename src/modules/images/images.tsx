@@ -16,7 +16,7 @@ const Grid = styled.div<Props>`
 
 const User = styled.div<StyledProps>`
     align-items: center;
-    background-color: ${({ theme }) => theme.colors.yellow};
+    background-color: ${({ theme }) => theme?.colors?.yellow};
     bottom: 0;
     display: flex;
     flex-direction: column;
