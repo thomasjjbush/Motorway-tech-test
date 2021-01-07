@@ -4,8 +4,8 @@ I chose to use my own boilerplate since it has linting and TS already set up for
 
 ## Images
 I've tried to do a dynamic masonry grid for the car images. As I felt this was a cool approach to handle the variety of dimensions. Regarding API performance I'm storing responses in localStorage (keyed by request url). Better approaches: 
-    - Used ServiceWorker but I didn't have sufficient time (I probably would have if I had cloned the repo as it already had a service worker registered! - sorry about that!).
-    - Added Cache controls headers to server response (wasn't sure if I was allowed to change the server, otherwise I would have removed the timeout too haha!)
+- Used ServiceWorker but I didn't have sufficient time (I probably would have if I had cloned the repo as it already had a service worker registered! - sorry about that!).
+- Added Cache controls headers to server response (wasn't sure if I was allowed to change the server, otherwise I would have removed the timeout too haha!)
 
 ## Form
 I could have opted for the simpler built-in validation by relying on (required, pattern and the :valid :invalid psuedo classes) but I figured custom JS was more appropriate for tech test. I've tried to make it as dynamic as possible so it could accept n amount of fields (of any type)
