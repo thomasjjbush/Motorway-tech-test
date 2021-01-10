@@ -18,8 +18,13 @@ expect.addSnapshotSerializer(
                             : rule({
                                   ...value.props,
                                   theme: {
+                                      breakpoints: {
+                                          tabletPortrait: 768,
+                                          tabletLandscape: 1024,
+                                      },
                                       colors: {
                                           blue: 'theme.colors.blue',
+                                          grey: 'theme.colors.grey',
                                           red: 'theme.colors.red',
                                           yellow: 'theme.colors.yellow',
                                       },

@@ -37,6 +37,7 @@ const images = [
     },
 ];
 
+jest.mock('../../hooks/use-breakpoints/use-breakpoints', () => ({ useBreakpoints: jest.fn().mockReturnValue(2) }));
 jest.mock('../../components/button/button', () => ({ Button: (props: any) => props.children }));
 jest.mock('../../components/image/image', () => ({ Image: () => 'Image' }));
 jest.mock('../../const/const', () => ({ ...jest.requireActual('../../const/const'), noOfImages: 2 }));
@@ -53,7 +54,7 @@ const flushPromises = async (wrapper: ReactWrapper, extraMethod?: () => void) =>
 
 describe('Images', () => {
     it('should match before and after loading images snapshot', async () => {
-        const wrapper = mount(<Images columns={2} />);
+        const wrapper = mount(<Images desktop={4} mobile={1} tablet={2} />);
         expect(wrapper.find({ 'data-test-id': 'grid-item' }).exists()).toBe(false);
         expect(wrapper).toMatchSnapshot();
 
@@ -63,7 +64,7 @@ describe('Images', () => {
     });
 
     it('should load more images on load more click', async () => {
-        const wrapper = mount(<Images columns={2} />);
+        const wrapper = mount(<Images desktop={4} mobile={1} tablet={2} />);
         await flushPromises(wrapper);
         expect(wrapper.find({ 'data-test-id': 'grid-item' }).length).toBe(4);
 

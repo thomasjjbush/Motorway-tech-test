@@ -9,20 +9,27 @@ const Label = styled.label`
 `;
 
 const Input = styled.input<StyledProps<{ valid: boolean }>>`
+    background-color: transparent;
+    border: solid 2px ${({ theme, valid }): string => (valid ? theme.colors.yellow : theme.colors.red)};
     border-radius: 5px;
+    color: white;
     height: 30px;
     margin-bottom: 20px;
+    max-width: 300px;
     padding: 0 10px;
-
-    ${({ theme, valid }): string => `border: solid 2px ${valid ? 'black' : theme.colors.red};`}
+    width: 100%;
 `;
 
 const StyledForm = styled.form`
+    background-color: ${({ theme }) => theme.colors.grey};
     border: solid 2px black;
-    border-radius: 5px;
-    margin: 20px auto 0;
-    max-width: 1000px;
-    padding: 30px;
+    color: white;
+
+    & > div {
+        margin: auto;
+        max-width: 1300px;
+        padding: 20px;
+    }
 `;
 
 export const Form: FC<Props> = ({ ariaLabel, fields: initialFields, onSubmit }: Props): ReactElement => {
@@ -40,28 +47,35 @@ export const Form: FC<Props> = ({ ariaLabel, fields: initialFields, onSubmit }: 
     };
 
     return (
-        <StyledForm aria-label={ariaLabel} data-test-id="form" onSubmit={onSubmit}>
-            {Object.entries(fields).map(([key, { label, max, min, type, valid = false, validation, value = '' }]) => (
-                <div key={key}>
-                    <Label htmlFor={key}>{label}</Label>
-                    <Input
-                        id={key}
-                        max={max}
-                        min={min}
-                        name={label}
-                        onChange={(e) => onChange(key, e)}
-                        type={type}
-                        valid={Boolean(!validation && value) || valid}
-                        value={value}
-                    />
-                </div>
-            ))}
-            <Button
-                disabled={Object.values(fields).some(({ valid, validation }) => validation && !valid)}
-                type="submit"
-            >
-                Submit
-            </Button>
+        <StyledForm aria-label={ariaLabel} autoComplete="off" data-test-id="form" onSubmit={onSubmit}>
+            <div>
+                {Object.entries(fields).map(
+                    ([key, { label, max, min, type, valid = false, validation, value = '' }]) => (
+                        <div key={key}>
+                            <Label htmlFor={key}>{label}</Label>
+                            <Input
+                                id={key}
+                                max={max}
+                                min={min}
+                                name={label}
+                                onChange={(e) => onChange(key, e)}
+                                type={type}
+                                valid={Boolean(!validation && value) || valid}
+                                value={value}
+                            />
+                            {type === 'range' && value && <span>£{value}</span>}
+                        </div>
+                    ),
+                )}
+                <Button
+                    disabled={Object.values(fields).some(
+                        ({ valid, validation, value }) => !value || (validation && !valid),
+                    )}
+                    type="submit"
+                >
+                    Submit
+                </Button>
+            </div>
         </StyledForm>
     );
 };

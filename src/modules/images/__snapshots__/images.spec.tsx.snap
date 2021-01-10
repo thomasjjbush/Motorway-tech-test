@@ -2,7 +2,9 @@
 
 exports[`Images should match before and after loading images snapshot 1`] = `
 <Images
-  columns={2}
+  desktop={4}
+  mobile={1}
+  tablet={2}
 >
   <styled.div
     columns={2}
@@ -12,10 +14,11 @@ exports[`Images should match before and after loading images snapshot 1`] = `
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
     max-width: 1300px;
+    padding: 20px;
 "
   >
     <div
-      className="sc-bdfBwQ hDKNXZ"
+      className="sc-bdfBwQ ABmXt"
     >
       <div
         key="0"
@@ -24,6 +27,7 @@ exports[`Images should match before and after loading images snapshot 1`] = `
         key="1"
       />
       <Button
+        disabled={false}
         onClick={[Function]}
         type="button"
       >
@@ -36,7 +40,9 @@ exports[`Images should match before and after loading images snapshot 1`] = `
 
 exports[`Images should match before and after loading images snapshot 2`] = `
 <Images
-  columns={2}
+  desktop={4}
+  mobile={1}
+  tablet={2}
 >
   <styled.div
     columns={2}
@@ -46,10 +52,11 @@ exports[`Images should match before and after loading images snapshot 2`] = `
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
     max-width: 1300px;
+    padding: 20px;
 "
   >
     <div
-      className="sc-bdfBwQ hDKNXZ"
+      className="sc-bdfBwQ ABmXt"
     >
       <div
         key="0"
@@ -63,7 +70,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
 
     :hover,
     :focus {
-        img {
+        img:last-of-type {
             filter: grayscale(100%);
         }
 
@@ -75,7 +82,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
           tabIndex={0}
         >
           <div
-            className="sc-dlfnbm iwMkmt"
+            className="sc-dlfnbm kVICxw"
             data-test-id="grid-item"
             tabIndex={0}
           >
@@ -152,7 +159,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
 
     :hover,
     :focus {
-        img {
+        img:last-of-type {
             filter: grayscale(100%);
         }
 
@@ -164,7 +171,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
           tabIndex={0}
         >
           <div
-            className="sc-dlfnbm iwMkmt"
+            className="sc-dlfnbm kVICxw"
             data-test-id="grid-item"
             tabIndex={0}
           >
@@ -230,6 +237,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
         </styled.div>
       </div>
       <Button
+        disabled={false}
         onClick={[Function]}
         type="button"
       >

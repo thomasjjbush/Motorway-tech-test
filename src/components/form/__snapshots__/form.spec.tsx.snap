@@ -3,80 +3,93 @@
 exports[`Form should match snapshot 1`] = `
 <styled.form
   aria-label="aria label"
+  autoComplete="off"
   data-test-id="form"
   onSubmit={[MockFunction]}
   styles="
+    background-color: theme.colors.grey;
     border: solid 2px black;
-    border-radius: 5px;
-    margin: 20px auto 0;
-    max-width: 1000px;
-    padding: 30px;
+    color: white;
+
+    & > div {
+        margin: auto;
+        max-width: 1300px;
+        padding: 20px;
+    }
 "
 >
-  <div
-    key="mock"
-  >
-    <styled.label
-      htmlFor="mock"
-      styles="
+  <div>
+    <div
+      key="mock"
+    >
+      <styled.label
+        htmlFor="mock"
+        styles="
     display: block;
     margin-bottom: 5px;
 "
-    >
-      mock
-    </styled.label>
-    <styled.input
-      id="mock"
-      name="mock"
-      onChange={[Function]}
-      styles="
-    border-radius: 5px;
-    height: 30px;
-    margin-bottom: 20px;
-    padding: 0 10px;
-
+      >
+        mock
+      </styled.label>
+      <styled.input
+        id="mock"
+        name="mock"
+        onChange={[Function]}
+        styles="
+    background-color: transparent;
     border: solid 2px theme.colors.red;
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+    margin-bottom: 20px;
+    max-width: 300px;
+    padding: 0 10px;
+    width: 100%;
 "
-      valid={false}
-      value=""
-    />
-  </div>
-  <div
-    key="anotherMock"
-  >
-    <styled.label
-      htmlFor="anotherMock"
-      styles="
+        valid={false}
+        value=""
+      />
+    </div>
+    <div
+      key="anotherMock"
+    >
+      <styled.label
+        htmlFor="anotherMock"
+        styles="
     display: block;
     margin-bottom: 5px;
 "
-    >
-      Another mock
-    </styled.label>
-    <styled.input
-      id="anotherMock"
-      max={30}
-      min={0}
-      name="Another mock"
-      onChange={[Function]}
-      styles="
+      >
+        Another mock
+      </styled.label>
+      <styled.input
+        id="anotherMock"
+        max={30}
+        min={0}
+        name="Another mock"
+        onChange={[Function]}
+        styles="
+    background-color: transparent;
+    border: solid 2px theme.colors.yellow;
     border-radius: 5px;
+    color: white;
     height: 30px;
     margin-bottom: 20px;
+    max-width: 300px;
     padding: 0 10px;
-
-    border: solid 2px black;
+    width: 100%;
 "
-      type="number"
-      valid={true}
-      value={5}
-    />
+        type="number"
+        valid={true}
+        value={5}
+      />
+    </div>
+    <Button
+      disabled={true}
+      type="submit"
+    >
+      Submit
+    </Button>
   </div>
-  <Button
-    disabled={true}
-    type="submit"
-  >
-    Submit
-  </Button>
 </styled.form>
 `;

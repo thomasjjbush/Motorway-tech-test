@@ -5,13 +5,15 @@ import { noOfImages, serverDomain } from '../../const/const';
 import { Button } from '../../components/button/button';
 import { Image } from '../../components/image/image';
 import { Image as ImageT, ImagesProps as Props, StyledProps } from '../../../types';
+import { useBreakpoints } from '../../hooks/use-breakpoints/use-breakpoints';
 
-const Grid = styled.div<Props>`
+const Grid = styled.div<{ columns: number }>`
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(${({ columns }): number => columns}, 1fr);
     margin: auto;
     max-width: 1300px;
+    padding: 20px;
 `;
 
 const User = styled.div<StyledProps>`
@@ -35,7 +37,7 @@ const GridItem = styled.div`
 
     :hover,
     :focus {
-        img {
+        img:last-of-type {
             filter: grayscale(100%);
         }
 
@@ -53,9 +55,10 @@ const Likes = styled.p`
     margin: 0;
 `;
 
-export const Images: FC<Props> = ({ columns }: Props): ReactElement => {
+export const Images: FC<Props> = ({ desktop, mobile, tablet }: Props): ReactElement => {
+    const [loading, setLoading] = useState(false);
     const [images, setImages] = useState<ImageT[]>([]);
-    const [offset, setOffset] = useState(0);
+    const columns = useBreakpoints({ desktop, mobile, tablet }) as number;
 
     useEffect(() => {
         (async () => {
@@ -64,8 +67,9 @@ export const Images: FC<Props> = ({ columns }: Props): ReactElement => {
     }, []);
 
     const onClick = async () => {
-        setOffset(offset + noOfImages);
-        setImages([...images, ...(await server('images', noOfImages, offset + noOfImages))]);
+        setLoading(true);
+        setImages([...images, ...(await server('images', noOfImages, images.length))]);
+        setLoading(false);
     };
 
     return (
@@ -96,9 +100,11 @@ export const Images: FC<Props> = ({ columns }: Props): ReactElement => {
                         </div>
                     );
                 })}
-            <Button onClick={onClick} type="button">
-                Load more
-            </Button>
+            {images.length < 30 && (
+                <Button disabled={loading} onClick={onClick} type="button">
+                    Load more
+                </Button>
+            )}
         </Grid>
     );
 };

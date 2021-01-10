@@ -13,8 +13,13 @@ export const noOfImages = 10;
 export const serverDomain = 'http://localhost:5000';
 
 export const theme: Theme = {
+    breakpoints: {
+        tabletPortrait: 768,
+        tabletLandscape: 1024,
+    },
     colors: {
         blue: '#0397d8',
+        grey: '#1d1d1b',
         red: '#e72f3d',
         yellow: '#fef200',
     },

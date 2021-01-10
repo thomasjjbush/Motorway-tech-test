@@ -48,6 +48,7 @@ export interface Image {
     alt_description: string;
     categories: string[];
     likes: number;
+    tabIndex?: number;
     user: {
         id: string;
         updated_at: string;
@@ -73,7 +74,9 @@ export interface ImageProps {
 }
 
 export interface ImagesProps {
-    columns: number;
+    mobile: number;
+    desktop: number;
+    tablet: number;
 }
 
 export interface SerializerMap extends Json {
@@ -92,11 +95,22 @@ export interface SerializerMap extends Json {
 export type StyledProps<P = unknown> = { theme: Theme } & P;
 
 export interface Theme {
+    breakpoints: {
+        tabletPortrait: number;
+        tabletLandscape: number;
+    };
     colors: {
         blue: string;
+        grey: string;
         red: string;
         yellow: string;
     };
+}
+
+export interface UseBreakpointsArgs {
+    desktop?: unknown;
+    mobile?: unknown;
+    tablet?: unknown;
 }
 
 export interface WebpackConfig {

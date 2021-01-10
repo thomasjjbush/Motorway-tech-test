@@ -7,7 +7,7 @@ import { Images } from '../images/images';
 
 const GlobalStyles = createGlobalStyle<StyledProps>`
     body {
-        margin: 20px;
+        margin: 0;
 
         * {
             box-sizing: border-box;
@@ -27,7 +27,7 @@ export const App: FC = (): ReactElement => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <Images columns={3} />
+            <Images desktop={4} mobile={1} tablet={2} />
             <Form ariaLabel="Form information" fields={fields} onSubmit={onSubmit}></Form>
         </ThemeProvider>
     );
