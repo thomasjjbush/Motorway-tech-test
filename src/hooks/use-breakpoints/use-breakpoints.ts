@@ -22,7 +22,7 @@ export const useBreakpoints = ({ desktop, mobile, tablet }: UseBreakpointsArgs):
     const [currentValue, setCurrentValue] = useState(getValue(desktop, mobile, tablet, tabletL, tabletP));
 
     useEffect(() => {
-        const callback = (e) => setCurrentValue(getValue(desktop, mobile, tablet, tabletL, tabletP, e));
+        const callback = (e: any) => setCurrentValue(getValue(desktop, mobile, tablet, tabletL, tabletP, e));
 
         window.addEventListener('resize', callback); // This should be throttled
         return () => window.removeEventListener('resize', callback);
