@@ -70,7 +70,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
 
     :hover,
     :focus {
-        img:last-of-type {
+        > picture img {
             filter: grayscale(100%);
         }
 
@@ -82,7 +82,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
           tabIndex={0}
         >
           <div
-            className="sc-dlfnbm kVICxw"
+            className="sc-dlfnbm eNjwaX"
             data-test-id="grid-item"
             tabIndex={0}
           >
@@ -159,7 +159,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
 
     :hover,
     :focus {
-        img:last-of-type {
+        > picture img {
             filter: grayscale(100%);
         }
 
@@ -171,7 +171,7 @@ exports[`Images should match before and after loading images snapshot 2`] = `
           tabIndex={0}
         >
           <div
-            className="sc-dlfnbm kVICxw"
+            className="sc-dlfnbm eNjwaX"
             data-test-id="grid-item"
             tabIndex={0}
           >
