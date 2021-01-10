@@ -37,7 +37,7 @@ const GridItem = styled.div`
 
     :hover,
     :focus {
-        img:last-of-type {
+        > picture img {
             filter: grayscale(100%);
         }
 
